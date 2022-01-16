@@ -1,7 +1,7 @@
 {
   "name": "developer-portfolio",
   "version": "0.1.0",
-  "private": false,
+  "private": true,
   "homepage": "https://ntzwilly.github.io",
   "dependencies": {
     "@material-ui/core": "^4.12.2",
