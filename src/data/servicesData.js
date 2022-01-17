@@ -41,12 +41,12 @@ export const servicesData = [
         icon: <BsCodeSlash />
     },
     {
-        id: 6,
+        id: 7,
         title: 'Database Implementation',
         icon: <FaDatabase />
     },
     {
-        id: 7,
+        id: 8,
         title: 'Unit Test',
         icon: <ImCogs />
     },
@@ -76,7 +76,7 @@ export const servicesData = [
     //     icon: <AiFillAudio />
     // },
     {
-        id: 13,
+        id: 10,
         title: 'System Administration',
         icon: <MdSettingsSystemDaydream />
     },

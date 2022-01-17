@@ -3,7 +3,7 @@
 import React, { useContext } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Fade from 'react-reveal/Fade';
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 
 import { AiOutlineFolder } from 'react-icons/ai';
 import { ThemeContext } from '../../contexts/ThemeContext';
@@ -13,8 +13,6 @@ import './Achievement.css';
 function AchievementCard({
   id, title, details, date, field, url, image,
 }) {
-  // console.log(title);
-
   const { theme } = useContext(ThemeContext);
 
   const useStyles = makeStyles(() => ({
@@ -37,10 +35,10 @@ function AchievementCard({
           </div>
           <div className="achievecard-details2" style={{ color: theme.primary }}>
             <h5>{date}</h5>
-            <Link onClick={() => window.open(url)} className="achievecard-field" style={{ color: theme.primary }}>
+            <a href={url} target="_blank" className="achievecard-field" style={{ color: theme.primary }} rel="noopener noreferrer">
               <AiOutlineFolder />
               <h5>{field}</h5>
-            </Link>
+            </a>
           </div>
         </div>
         <div className="achievecard-imgcontainer">

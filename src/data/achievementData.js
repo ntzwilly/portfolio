@@ -34,7 +34,7 @@ export const achievementData = {
       image: icon,
     },
     {
-      id: 3,
+      id: 4,
       title: 'React & Redux Certificate of Completion',
       details: 'Demonstrate thorough understanding and mastery of React and Redux. Over the course of this module, students build and develop multiple projects using React and Redux, working both independently and while remotely pair-programming.',
       date: 'Nov 21, 2021',

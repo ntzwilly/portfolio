@@ -24,6 +24,7 @@ function Achievement() {
                 details={achieve.details}
                 date={achieve.date}
                 field={achieve.field}
+                url={achieve.url}
                 image={achieve.image}
               />
             ))}
