@@ -3,7 +3,6 @@
 import React, { useContext } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Fade from 'react-reveal/Fade';
-// import { Link } from 'react-router-dom';
 
 import { AiOutlineFolder } from 'react-icons/ai';
 import { ThemeContext } from '../../contexts/ThemeContext';
