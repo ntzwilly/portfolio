@@ -7,10 +7,20 @@ import five from '../assets/png/bookstore.png';
 import six from '../assets/png/math.png';
 import seven from '../assets/png/leaderboard.png';
 import eight from '../assets/png/natours.png';
+import nine from '../assets/png/budget.png';
 
 export const projectsData = [
   {
     id: 1,
+    projectName: 'Budgetplus',
+    projectDesc: 'This is a mobile web application where you can manage your budget: you have a list of transactions associated with a category, so that you can see how much money you spent and on what.',
+    tags: ['Ruby on Rails', 'PostgreSQL', 'Bootstrap', 'CSS'],
+    code: 'https://github.com/ntzwilly/budget-app',
+    demo: 'https://railsbudgetplus.herokuapp.com/',
+    image: nine,
+  },
+  {
+    id: 2,
     projectName: 'Blog-Rails-App',
     projectDesc: 'The Blog app will be a classic example of a blog website. It will be a fully functional website that will show the list of posts and empower readers to interact with them by adding comments and liking posts.',
     tags: ['Ruby on Rails', 'PostgreSQL', 'CSS'],
@@ -19,7 +29,7 @@ export const projectsData = [
     image: one,
   },
   {
-    id: 2,
+    id: 3,
     projectName: 'school-library',
     projectDesc: 'This is a console app that helps you to keep a record of different types of things you won: books, music albums, movies, and games.',
     tags: ['Ruby'],
@@ -28,7 +38,7 @@ export const projectsData = [
     image: two,
   },
   {
-    id: 3,
+    id: 4,
     projectName: 'vet-clinic-database',
     projectDesc: 'In this project, I use a relational database to create the data structure for a vet clinic.',
     tags: ['PostgreSQL'],
@@ -37,7 +47,7 @@ export const projectsData = [
     image: three,
   },
   {
-    id: 4,
+    id: 5,
     projectName: 'metrics-app',
     projectDesc: 'This is a mobile web application built with React and Redux. It can be used to check the numeric values of COVID cases in various European countries.',
     tags: ['React', 'Redux', 'CSS'],
@@ -46,7 +56,7 @@ export const projectsData = [
     image: four,
   },
   {
-    id: 5,
+    id: 6,
     projectName: 'bookstore',
     projectDesc: 'A simple website application where a user can add and remove books from a list.',
     tags: ['React & Redux', 'JSX', 'CSS'],
@@ -55,7 +65,7 @@ export const projectsData = [
     image: five,
   },
   {
-    id: 6,
+    id: 7,
     projectName: 'math-magicians',
     projectDesc: 'This is a Single Page App (SPA) that allows users to make simple calculations and read a random math-related quote.',
     tags: ['React', 'JSX', 'CSS'],
@@ -64,7 +74,7 @@ export const projectsData = [
     image: six,
   },
   {
-    id: 7,
+    id: 8,
     projectName: 'centerboard-app',
     projectDesc: 'This website displays scores submitted by different players. It also allows you to submit your score. All data is preserved to an external Weatherboard API service.',
     tags: ['javascript', 'CSS'],
@@ -73,7 +83,7 @@ export const projectsData = [
     image: seven,
   },
   {
-    id: 8,
+    id: 9,
     projectName: 'Natours',
     projectDesc: 'Website of a fictional company that offers tours in nature. Build as part of the online course Advanced CSS and SASS by Jonas Schmedtmann',
     tags: ['HTML', 'CSS', 'Sass'],
