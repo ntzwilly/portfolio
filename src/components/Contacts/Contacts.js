@@ -1,9 +1,10 @@
 /* eslint-disable jsx-a11y/label-has-associated-control */
-import React, { useContext, useState } from 'react';
+import React, { useContext, useState, useRef } from 'react';
 import { Snackbar, IconButton, SnackbarContent } from '@material-ui/core';
 import CloseIcon from '@material-ui/icons/Close';
-import axios from 'axios';
-import isEmail from 'validator/lib/isEmail';
+import emailjs from 'emailjs-com';
+// import axios from 'axios';
+// import isEmail from 'validator/lib/isEmail';
 import { makeStyles } from '@material-ui/core/styles';
 import {
   FaTwitter,
@@ -124,35 +125,54 @@ function Contacts() {
 
   const classes = useStyles();
 
-  const handleContactForm = (e) => {
+  const form = useRef();
+
+  const sendEmail = (e) => {
     e.preventDefault();
 
-    if (name && email && message) {
-      if (isEmail(email)) {
-        const responseData = {
-          name,
-          email,
-          message,
-        };
-
-        axios.post(contactsData.sheetAPI, responseData).then(() => {
-          setSuccess(true);
-          setErrMsg('');
-
-          setName('');
-          setEmail('');
-          setMessage('');
-          setOpen(false);
-        });
-      } else {
-        setErrMsg('Invalid email');
-        setOpen(true);
-      }
-    } else {
-      setErrMsg('Enter all the fields');
-      setOpen(true);
-    }
+    emailjs.sendForm('service_0i5spzm', 'template_yagj83x', form.current, 'umB1KeDa2_QTg1KT_')
+      .then((result) => {
+        console.log(result.text);
+        setSuccess(true);
+        setErrMsg('');
+        setName('');
+        setEmail('');
+        setMessage('');
+        setOpen(false);
+      }, (error) => {
+        console.log(error.text);
+      });
   };
+
+  // const handleContactForm = (e) => {
+  //   e.preventDefault();
+
+  //   if (name && email && message) {
+  //     if (isEmail(email)) {
+  //       const responseData = {
+  //         name,
+  //         email,
+  //         message,
+  //       };
+
+  //       axios.post(contactsData.sheetAPI, responseData).then(() => {
+  //         setSuccess(true);
+  //         setErrMsg('');
+
+  //         setName('');
+  //         setEmail('');
+  //         setMessage('');
+  //         setOpen(false);
+  //       });
+  //     } else {
+  //       setErrMsg('Invalid email');
+  //       setOpen(true);
+  //     }
+  //   } else {
+  //     setErrMsg('Enter all the fields');
+  //     setOpen(true);
+  //   }
+  // };
 
   return (
     <div
@@ -164,7 +184,7 @@ function Contacts() {
         <h1 style={{ color: theme.primary }}>Contacts</h1>
         <div className="contacts-body">
           <div className="contacts-form">
-            <form onSubmit={handleContactForm}>
+            <form ref={form} onSubmit={sendEmail}>
               <div className="input-container">
                 <label htmlFor="Name" className={classes.label}>
                   Name
@@ -174,7 +194,7 @@ function Contacts() {
                   value={name}
                   onChange={(e) => setName(e.target.value)}
                   type="text"
-                  name="Name"
+                  name="name"
                   className={`form-input ${classes.input}`}
                 />
               </div>
@@ -190,7 +210,7 @@ function Contacts() {
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   type="email"
-                  name="Email"
+                  name="email"
                   className={`form-input ${classes.input}`}
                 />
               </div>
@@ -206,7 +226,7 @@ function Contacts() {
                   value={message}
                   onChange={(e) => setMessage(e.target.value)}
                   type="text"
-                  name="Message"
+                  name="message"
                   className={`form-message ${classes.message}`}
                 />
               </div>

@@ -10,6 +10,7 @@
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
     "axios": "^0.21.1",
+    "emailjs-com": "^3.2.0",
     "lottie-react-native": "^5.0.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
@@ -22,7 +23,10 @@
     "react-router-hash-link": "^2.4.3",
     "react-scripts": "^4.0.3",
     "react-slick": "^0.28.1",
+    "semantic-ui-css": "^2.4.1",
+    "semantic-ui-react": "^2.1.2",
     "slick-carousel": "^1.8.1",
+    "sweetalert2": "^11.4.4",
     "validator": "^13.6.0",
     "web-vitals": "^1.0.1"
   },
