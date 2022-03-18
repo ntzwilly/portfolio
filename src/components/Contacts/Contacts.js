@@ -130,18 +130,25 @@ function Contacts() {
   const sendEmail = (e) => {
     e.preventDefault();
 
-    emailjs.sendForm('service_0i5spzm', 'template_yagj83x', form.current, 'umB1KeDa2_QTg1KT_')
-      .then((result) => {
-        console.log(result.text);
-        setSuccess(true);
-        setErrMsg('');
-        setName('');
-        setEmail('');
-        setMessage('');
-        setOpen(false);
-      }, (error) => {
-        console.log(error.text);
-      });
+    if (name && email && message) {
+      if (form.current) {
+        emailjs.sendForm('service_0i5spzm', 'template_yagj83x', form.current, 'umB1KeDa2_QTg1KT_')
+          .then(() => {
+            setSuccess(true);
+            setErrMsg('');
+            setName('');
+            setEmail('');
+            setMessage('');
+            setOpen(false);
+          });
+      } else {
+        setErrMsg('Invalid email');
+        setOpen(true);
+      }
+    } else {
+      setErrMsg('Enter all the fields');
+      setOpen(true);
+    }
   };
 
   // const handleContactForm = (e) => {
