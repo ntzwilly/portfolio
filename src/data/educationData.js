@@ -19,6 +19,6 @@ export const educationData = [
     institution: 'Microverse',
     course: 'Software development',
     startYear: '2021',
-    endYear: 'Present',
+    endYear: '2022',
   },
 ];
