@@ -51,6 +51,15 @@ export const achievementData = {
       url: 'https://adscerts.com/scholar/A06964D4D87F7B37',
       image: 'https://images.unsplash.com/photo-1573141597928-403fcee0e056?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=667&q=80',
     },
+    {
+      id: 6,
+      title: 'Google Cloud Certificate of Completion',
+      details: 'Successfully undertaken six months of training in Google Cloud offered through the Google Africa Developer Scholarship Program.',
+      date: 'May 10, 2022',
+      field: 'view',
+      url: 'https://adscerts.com/scholar/6EA403E502B16E9',
+      image: 'https://images.unsplash.com/photo-1573141597928-403fcee0e056?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=667&q=80',
+    },
 
   ],
 };
